@@ -57,6 +57,7 @@ class DB():
                 print("插入失败", e)
                 self.db.rollback()
 
+
     def SelectAll(self):
         sql = "SELECT * from main"
         try:

@@ -10,7 +10,9 @@ def SelectALL(request):
 
 def Select(request):
     hero = request.GET['Hero']
+    print(hero)
     relation = request.GET['Relations']
+    print(relation)
     result = Main.objects.filter(subject=hero, predicate=relation).order_by("id")
     print(result)
     return render(request, 'index.html', {'result': result})
