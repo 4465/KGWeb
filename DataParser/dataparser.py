@@ -5,7 +5,6 @@ class FILEParser():
         self.SPO = []
 
     def ParserCVS(self, path):
-
         print(path)
         with open('data/triples.csv', 'r', encoding='utf-8') as csvfile:
             reader = csv.reader(csvfile)
