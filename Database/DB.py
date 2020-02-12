@@ -70,3 +70,17 @@ class DB():
         except pymysql.Error as e:
             print("{} 失败".format(sql))
             self.db.rollback()
+
+    def Select(self, sql):
+        try:
+            print("数据库操作：", sql)
+            self.cursor.execute(sql)
+            self.db.commit()
+            print("数据库操作成功：{}成功".format(sql))
+            # print(self.cursor.fetchall())
+            data = list(self.cursor.fetchall())
+            print(data)
+            return data
+        except pymysql.Error as e:
+            print("{}失败".format(sql))
+            self.db.rollback()

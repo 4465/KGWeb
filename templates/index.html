@@ -28,8 +28,11 @@
       </div>
 
       <div class="panel-body">
-        {% for item in result %}
-            {{ item.object }}
+{#        {% for item in result %}#}
+{#            {{ item.object }}#}
+{#          {% endfor %}#}
+          {% for item in result %}
+              {{ item.0 }}
           {% endfor %}
       </div>
     </div>
@@ -51,6 +54,12 @@
                     <label for="inputRelation" class="col-sm-2 control-label">关系</label>
                     <div class="col-sm-10">
                       <input name="Relations" type="text" class="form-control" id="inputRelation" placeholder="请输入人物关系">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputSql" class="col-sm-2 control-label">sql</label>
+                    <div class="col-sm-10">
+                      <input name="Sql" type="text" class="form-control" id="inputSql" placeholder="请输入Sql语句">
                     </div>
                   </div>
                   <div class="form-group">
